@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  timebeat-backend-chart:
+  - apiVersion: v2
+    appVersion: 3.0.1
+    created: "2022-07-19T17:20:28.262802154+01:00"
+    description: Grafana / Elasticsearch Backend for Timebeat Enterprise Clients
+    digest: 642de6f876631e1fd0a60fe3a187f2f383cc462e3a44a0580abd5e994feb72c3
+    icon: https://timebeat.app/assets/img/logo/logo.png
+    name: timebeat-backend-chart
+    type: application
+    urls:
+    - https://timebeat.app/chart/timebeat-backend-chart-1.2.1.tgz
+    version: 1.2.1
+generated: "2022-07-19T17:20:28.261738559+01:00"
