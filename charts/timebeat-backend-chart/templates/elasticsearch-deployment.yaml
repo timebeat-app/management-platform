@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.17.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    app: elasticsearch
+  name: elasticsearch
+spec:
+  replicas: 1
+  strategy: {}
+  selector:
+    matchLabels:
+      app: elasticsearch
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+      - env:
+        - name: discovery.type
+          value: single-node
+        - name: xpack.security.enabled
+          value: "false"
+        image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+        name: elasticsearch
+        ports:
+        - containerPort: 9200
+        resources: {}
+        securityContext:
+          capabilities:
+            add:
+            - IPC_LOCK
+      restartPolicy: Always
+status: {}

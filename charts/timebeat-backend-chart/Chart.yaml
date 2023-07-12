@@ -1,0 +1,7 @@
+apiVersion: v2
+appVersion: 3.0.1
+description: Grafana / Elasticsearch Backend for Timebeat Enterprise Clients
+icon: https://timebeat.app/assets/img/logo/logo.png
+name: timebeat-backend-chart
+type: application
+version: 1.2.1
